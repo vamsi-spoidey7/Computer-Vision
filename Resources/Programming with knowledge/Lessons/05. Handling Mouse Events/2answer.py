@@ -3,8 +3,8 @@ import numpy as np
 
 def click_event(event,x,y,flags,params):
     if event == cv2.EVENT_LBUTTONDOWN:
-        blue = img[x,y,0]
-        green = img[x,y,1]
+        blue = img[y,x,0]
+        green = img[y,x,1]
         red = img[x,y,2]
         myColorImage = np.zeros([512,512,3],np.uint8)
         myColorImage[:] = [blue,green,red]
